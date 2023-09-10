@@ -13,25 +13,31 @@ public class Main {
 
         System.out.println(Arrays.toString(firstArray));
         System.out.println(Arrays.toString(secondArray));
-        System.out.println(GetAverage(firstArray));
-    }
-    public static double GetAverage(int [] firstArray){
-        double sum = 0.0; // Initialize sum to 0
 
-        for (int i = 0; i < firstArray.length; i++) {
+        double sum = 0.0;
+
+        for(int i = 0; i < firstArray.length; i++) {
             sum += firstArray[i];
         }
 
         double averageNumFirst = sum / firstArray.length;
-        return averageNumFirst;
-        //System.out.println(averageNumFirst);
+        System.out.println("average of first array"+ averageNumFirst);
 
-        /*for (int j = 0; j < secondArray.length; j++) {
+        for (int j = 0; j < secondArray.length; j++) {
             sum += secondArray[j];
         }
 
         double averageNumSecond = sum / secondArray.length;
-        return averageNumSecond;
-        //System.out.println(averageNumSecond);*/
+        System.out.println("average of second array"+averageNumSecond);
+
+        if(averageNumFirst>averageNumSecond){
+            System.out.println("average value of first array > average value of second array");
+        }
+        if(averageNumFirst<averageNumSecond){
+            System.out.println("average value of first array < average value of second array");
+        }
+        else{
+            System.out.println("values are equal");
+        }
     }
 }
