@@ -9,7 +9,7 @@ import java.util.Arrays;
 public class Main {
     public static void main(String[] args) {
         int[] firstArray = new int[]{37,1,2,3,4};
-        int[] secondArray = new int[] {90,1,2,3,4};
+        int[] secondArray = new int[] {37,1,2,3,4};
 
         System.out.println(Arrays.toString(firstArray));
         System.out.println(Arrays.toString(secondArray));
@@ -37,7 +37,7 @@ public class Main {
         if(averageNumFirst<averageNumSecond){
             System.out.println("average value of first array < average value of second array");
         }
-        else if (averageNumFirst==averageNumSecond) {
+        else if(averageNumFirst==averageNumSecond) {
             System.out.println("values are equal");
         }
     }
