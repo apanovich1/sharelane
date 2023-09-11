@@ -8,27 +8,28 @@ import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
-        int[] firstArray = new int[]{0,1,2,3,4};
-        int[] secondArray = new int[] {5,6,7,8,9};
+        int[] firstArray = new int[]{37,1,2,3,4};
+        int[] secondArray = new int[] {90,1,2,3,4};
 
         System.out.println(Arrays.toString(firstArray));
         System.out.println(Arrays.toString(secondArray));
 
-        double sum = 0.0;
+        double sumForFirst = 0.0;
 
         for(int i = 0; i < firstArray.length; i++) {
-            sum += firstArray[i];
+            sumForFirst += firstArray[i];
         }
 
-        double averageNumFirst = sum / firstArray.length;
-        System.out.println("average of first array"+ averageNumFirst);
+        double averageNumFirst = sumForFirst / firstArray.length;
+        System.out.println("average of first array"+ " " +averageNumFirst);
+        double sumForSecond = 0.0;
 
         for (int j = 0; j < secondArray.length; j++) {
-            sum += secondArray[j];
+            sumForSecond += secondArray[j];
         }
 
-        double averageNumSecond = sum / secondArray.length;
-        System.out.println("average of second array"+averageNumSecond);
+        double averageNumSecond = sumForSecond / secondArray.length;
+        System.out.println("average of second array"+" " + averageNumSecond);
 
         if(averageNumFirst>averageNumSecond){
             System.out.println("average value of first array > average value of second array");
@@ -36,7 +37,7 @@ public class Main {
         if(averageNumFirst<averageNumSecond){
             System.out.println("average value of first array < average value of second array");
         }
-        else{
+        else if (averageNumFirst==averageNumSecond) {
             System.out.println("values are equal");
         }
     }
