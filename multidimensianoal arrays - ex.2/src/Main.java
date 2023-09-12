@@ -5,10 +5,10 @@ B(Black) или W(White). Результат работы программы:
 public class Main {
     public static void main(String[] args) {
         int rows = 8;
-        int cols = 8;
-        String[][] array = new String[rows][cols];
+        int columns = 8;
+        String[][] array = new String[rows][columns];
         for (int i = 0; i < rows; i++) {
-            for (int j = 0; j < cols; j++) {
+            for (int j = 0; j < columns; j++) {
                 if ((i + j) % 2 == 0) {
                     array[i][j] = "w";
                 } else {
@@ -18,7 +18,7 @@ public class Main {
         }
 
         for (int i = 0; i < rows; i++) {
-            for (int j = 0; j < cols; j++) {
+            for (int j = 0; j < columns; j++) {
                 System.out.print(array[i][j] + " ");
             }
             System.out.println();
