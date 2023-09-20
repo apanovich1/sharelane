@@ -6,10 +6,6 @@ public class Main {
 
     public static void GetSeason(int month) {
 
-        String[] months = {"January", "February", "March", "April", "May",
-                "June", "July", "August", "September", "October",
-                "November", "December"};
-
         int monthIndex = month - 1;
         if(monthIndex == 0||monthIndex == 1||monthIndex == 12){
             System.out.println("winter");
