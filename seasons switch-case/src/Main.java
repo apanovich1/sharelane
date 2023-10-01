@@ -1,14 +1,11 @@
+
 public class Main {
     public static void main(String[] args) {
         System.out.println(GetSeason(10));
     }
 
     public static String GetSeason(int month) {
-        String season;
-
-        String[] months = {"January", "February", "March", "April", "May",
-                "June", "July", "August", "September", "October",
-                "November", "December"};
+       String season;
 
         int monthIndex = month - 1;
 
