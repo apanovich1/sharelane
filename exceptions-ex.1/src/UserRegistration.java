@@ -21,14 +21,5 @@ public class UserRegistration {
             throw new WrongPasswordException("Неверный пароль");
         }
     }
-
-    public static void main(String[] args) {
-        String login = "myusername";
-        String password = "mypassword123";
-        String confirmPassword = "mypassword123";
-
-        boolean result = registerUser(login, password, confirmPassword);
-        System.out.println("Регистрация успешна: " + result);
-    }
 }
 
