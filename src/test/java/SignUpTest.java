@@ -55,18 +55,18 @@ public class SignUpTest {
         browser.findElement(By.name("zip_code")).sendKeys("12345");
         browser.findElement(By.cssSelector("[value=Continue]")).click();
         String currentURL = browser.getCurrentUrl();
-        Assert.assertTrue(currentURL.contains("https://www.sharelane.com/cgi-bin/register.py?page=1&zip_code=12345")); // Replace with the expected URL
+        Assert.assertTrue(currentURL.contains("https://www.sharelane.com/cgi-bin/register.py?page=1&zip_code=12345"));
         browser.quit();
     }
     @Test
-    public void positiveSignUp() {
-        System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver");
+    public void signUpHappyPath() {
+        System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver.exe");
         WebDriver browser = new ChromeDriver();
         browser.get("https://www.sharelane.com/cgi-bin/register.py");
         browser.findElement(By.name("zip_code")).sendKeys(new CharSequence[]{"11111"});
         browser.findElement(By.cssSelector("[value=Continue]")).click();
-        browser.findElement(By.name("first_name")).sendKeys(new CharSequence[]{"Dmitry"});
-        browser.findElement(By.name("last_name")).sendKeys(new CharSequence[]{"Rak"});
+        browser.findElement(By.name("first_name")).sendKeys(new CharSequence[]{"Ann"});
+        browser.findElement(By.name("last_name")).sendKeys(new CharSequence[]{"Apanovich"});
         browser.findElement(By.name("email")).sendKeys(new CharSequence[]{"blabla@gmail.com"});
         browser.findElement(By.name("password1")).sendKeys(new CharSequence[]{"12345678"});
         browser.findElement(By.name("password2")).sendKeys(new CharSequence[]{"12345678"});
@@ -77,8 +77,8 @@ public class SignUpTest {
     }
 
     @Test
-    public void negativeSignUpEmptyInput() {
-        System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver");
+    public void signUpEmptyInput() {
+        System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver.exe");
         WebDriver driver = new ChromeDriver();
         driver.get("https://www.sharelane.com/cgi-bin/register.py");
         driver.findElement(By.name("zip_code")).sendKeys(new CharSequence[]{"11111"});
