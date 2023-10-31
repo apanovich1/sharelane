@@ -5,6 +5,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class BookCardTest {
+
     @Test
     public void addToCartValid() {
         System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver.exe");
@@ -23,10 +24,11 @@ public class BookCardTest {
         String addToCartSuccessMessage = browser.findElement(By.cssSelector("[class=confirmation_message]"))
                 .getText();
         Assert.assertEquals(addToCartSuccessMessage, "Book was added to the Shopping Cart",
-                "user is not able to add book in cart");
+                "A user is not able to add book in cart");
         
         browser.quit();
     }
+
     @Test
     public static void addToCartSignOut() {
         System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver.exe");
@@ -38,10 +40,9 @@ public class BookCardTest {
         String searchErrorMessage = browser.findElement(By.cssSelector("[class=error_message]"))
                 .getText();
         Assert.assertEquals(searchErrorMessage, "Oops, error. You must log in",
-                "incorrect message/user can add book");
+                "Incorrect message/user can add book");
 
         browser.quit();
 
     }
-
 }

@@ -48,6 +48,7 @@ public class ShoppingCartTest {
         Assert.assertEquals(total$, "190.00");
         browser.quit();
     }
+
     @Test
     public void discount2() {
         System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver.exe");
@@ -90,6 +91,7 @@ public class ShoppingCartTest {
         Assert.assertEquals(total$, "480.2");
         browser.quit();
     }
+
     @Test
     public void discount3() {
         System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver.exe");
@@ -132,6 +134,7 @@ public class ShoppingCartTest {
         Assert.assertEquals(total$, "960.30");
         browser.quit();
     }
+
     @Test
     public void discount4() {
         System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver.exe");
@@ -174,6 +177,7 @@ public class ShoppingCartTest {
         Assert.assertEquals(total$, "4790.40");
         browser.quit();
     }
+
     @Test
     public void discount5() {
         System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver.exe");
@@ -216,6 +220,7 @@ public class ShoppingCartTest {
         Assert.assertEquals(total$, "9490.50");
         browser.quit();
     }
+
     @Test
     public void discount6() {
         System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver.exe");
@@ -258,6 +263,7 @@ public class ShoppingCartTest {
         Assert.assertEquals(total$, "46990.60");
         browser.quit();
     }
+
     @Test
     public void discount7() {
         System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver.exe");
@@ -300,6 +306,7 @@ public class ShoppingCartTest {
         Assert.assertEquals(total$, "92990.70");
         browser.quit();
     }
+
     @Test
     public void discount8() {
         System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver.exe");
